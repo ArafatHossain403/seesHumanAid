@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> zakat-calc seeshumanaid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Open+Sans:wght@400;500&family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container-xl">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">
+                    <img src="/carousel/seeshumanaid.png" alt="Bootstrap" width="100" height="50">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse fw-bolder ms-5 ps-5" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">PROJECTS</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACTS US</a>
+                      </li>
+                      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Donation Type
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Emergency</a></li>
+                          <li><a class="dropdown-item" href="#">Wash</a></li>
+                          <li><a class="dropdown-item" href="#">Orphan Aid</a></li>
+                          <li>
+                            <li><a class="dropdown-item" href="#">Food Aid</a></li>
+                          <li>
+                            <li><a class="dropdown-item" href="#">Education</a></li>
+                          <li><li><a class="dropdown-item" href="#">Health</a></li>
+                          <li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Ramadan</a></li>
+                          <li><a class="dropdown-item" href="#">Qurban</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item ms-5 ">
+                        <a class="nav-link active  fw-bolder" href="zakat_calc.html">Zakat Calc.</a>
+                      </li>
+                      <li class="nav-item ms-5 ">
+                        <a class="nav-link active text-dark fw-bolder" href="login.html">Log In</a>
+                      </li>
+
+                      <li class="nav-item ms-5 ">
+                        <a class="nav-link active text-success fw-bolder" href="signup.html">Sign Up</a>
+                      </li>
+                      
+
+                      
+                    </ul>
+                   
+                        
+                      <button class="btn bg-danger btn-outline-danger text-light fw-bold me-5" type="submit">Donate</button>
+                   
+                      
+                    
+                  </div>
+                </div>
+              </nav>
+
+        </header>
+
+        
+
+    </section>
+
+    <main class="mt-lg-5 container-lg">
+      
+        <section class="secCenter pd-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12">
+                         <h2>Nisab threshold as of March 2023: 420,000 Tk<p></p>
+        </h2>
+        <h3>(based on the value of 85 grams of 24K gold)</h3>
+                        <br>
+                         <h2>CALCULATE YOUR ZAKAT</h2>                <div id="zform">
+                            <form class="style9" id="zakatCalculatorForm" action="" method="link" name="Form1">
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;"><strong>Assets and Liabilities</strong></div>
+                                    <div style="float: right;"><strong>Value in BD Tk</strong></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Cash at Home</div>
+                                    <div style="float: right;"><input class="form" id="amount_home" type="text" name="amount_home" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Balance Held in Bank Accounts</div>
+                                    <div style="float: right;"><input class="form" id="amount_bank" type="text" name="amount_bank" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Resale Value of Shares</div>
+                                    <div style="float: right;"><input class="form" id="amount_shares" type="text" name="amount_shares" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Merchandise &amp; Profits</div>
+                                    <div style="float: right;"><input class="form" id="amount_merchandise" type="text" name="amount_merchandise" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Gold &amp; Silver (at current value)</div>
+                                    <div style="float: right;"><input class="form" id="amount_gold" type="text" name="amount_gold" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width:  100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Property Held as Investment</div>
+                                    <div style="float: right;"><input class="form" id="amount_property" type="text" name="amount_property" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Other Income</div>
+                                    <div style="float: right;"><input class="form" id="amount_other" type="text" name="amount_other" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;"><strong>Total of Assets Liable for <em>Zakat</em></strong></div>
+                                    <div style="float: right;"><input class="form" id="amount_zakah1" type="text" name="amount_zakah1" readonly="readonly" size="12" value="0" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Deduct Debts</div>
+                                    <div style="float: right;"><input class="form" id="amount_debts" type="text" name="amount_debts" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">Deduct Expenses</div>
+                                    <div style="float: right;"><input class="form" id="amount_expenses" type="text" name="amount_expenses" size="12" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;"><strong><em>Zakat-Eligible</em> Total</strong></div>
+                                    <div style="float: right;"><input class="form" id="amount_zakah2" type="text" name="amount_zakah2" readonly="readonly" size="12" value="0" onchange="calcAmt(this.form)"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;"><strong>Ensure that <em>Zakat-Eligible</em> Total Exceeds <em>Nisab</em></strong></div>
+                                    <div style="float: right;"><input class="form" id="amount_nisab" type="text" maxlength="12" name="amount_nisab" readonly="readonly" value="420,000"></div>
+                                </div>
+                                <div style="width: 100%; height: 50px; clear: both;">
+                                    <div style="float: left;">
+                                        <strong>Your <em>Zakat</em>  <strong>(0.025 x <em>Zakat-Eligible</em> Total)</strong>
+                                    </strong></div><strong>
+                                    <div style="float: right;"><input id="zakahCalculated" type="text" maxlength="12" name="zakahCalculated" readonly="readonly"></div>
+                                    <input type="hidden" id="zakatFundID" value="48">
+                                </strong></div><strong>
+                                <div class="solid-box" style="background: none; border: none; box-shadow: none;">
+                                <button name="submit" type="submit" class="button" style="display: inline-block;
+                                cursor: pointer;padding: 8px 8px;border: 0px;-webkit-border-radius: 5px; border-radius: 5px; font-size: 20px; color: rgba(255,255,255,0.9);-o-text-overflow: clip;
+                                text-overflow: clip;background: #d80202;">PAY YOUR ZAKAT NOW &gt;&gt;</button>
+                         </div>      
+                          
+                        </strong></form></div><strong>
+                     <p>&nbsp;</p>
+        <p style="text-align: justify; font-size: 11px !important;"><em>Zakat is payable at 2.5% of the wealth one possesses above the nisab. Nisab, which is equal to 85 grams of 24k gold, is the minimum amount of wealth one must have before they are liable to pay zakat. *The nisab amount listed is based on the latest available report to us (note: This number may change daily depending on fluctuations in the gold exchange rate). Zakat is liable on gold, silver, cash, savings, investments, rent income, business merchandise and profits, shares, securities and bonds. Zakat is not paid on wealth used for debt repayment of living expenses such as clothing, food, housing, transportation, education, etc. IRUSA follows the practice agreed upon by most scholars, which states that collectors of zakat are one of the eight groups that are eligible to receive zakat. As such, IRUSA is eligible to use up to 10% of donations made to zakat-specific funds for core work, including administrative and operational functions. Finally, an important note: Please consider adding 2% to your total zakat donation when using a credit card—this will compensate for any transaction fees deducted from your donation by the credit card companies, and will ensure that your intended zakat amount is paid in full.</em></p>
+         
+                    </strong></div><strong>
+          
+        
+                </strong></div><strong> <!--/row-->
+            </strong></div><strong>
+        </strong></section>
+    </main>
+
+    <footer class="bg-dark mt-5">
+      <div class=" container-md py-5 ">
+        <div class="row align-items-start d-flex text-light  ">
+          <div class="col-lg-3 col-6">
+            <h3  class="footer-header fw-bolder">MAKE A DONATION</h3>
+           <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#">Donate Now</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Pay your Zakat</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Cleanse your interest</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Sponsor an orphan</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Build a well</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Donate your qurban</a></li>
+
+           </ul>
+              
+              
+            
+          </div>
+          <div class="col-lg-3 col-6">
+            <h3 class="footer-header fw-bolder">ALL PROJECTS</h3>
+           <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#">Emergency</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Qurban</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Orphan aid</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Food aid</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Aqeeqah & sacrifice</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Education</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Shelter</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Ramadan</a></li>
+
+
+           </ul>
+            
+          </div>
+          <div class="col-lg-3 col-6">
+            <h3 class="footer-header fw-bolder">ABOUT</h3>
+           <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#">Who we are</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Our vision, mission & values  </a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Reporting</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">FAQs</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Terms & conditions</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Privacy policy</a></li>
+
+           </ul>
+          </div>
+          <div class="col-lg-3 col-6">
+            <h3 class="footer-header fw-bolder">GET INVOLVED</h3>
+           <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#">Become a volunteer</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Little Seeds</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Subscribe</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Feedback form</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Corporate sponsorship</a></li>
+              <li class="mb-2"><a class="text-decoration-none text-light" href="#">Help cover our costs</a></li>
+
+           </ul>
+           <h3 class="footer-header fw-bolder">CONTACT US</h3>
+           <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#">Address: 27 HafizNagar, Khulna,Bangladesh </a></li>
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#">Contact: 01753157453</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-light" href="#"> Email: seeshumanaid@gmail.com</a></li>
+
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-3">
+        <p class="text-light ">Terms and Conditions | Privacy Policy | Complaints Policy | © Arafat Hossain 2023</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+    <script src="app.js"></script>
+</body>
+</html>
